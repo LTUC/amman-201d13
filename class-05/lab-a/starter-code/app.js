@@ -89,6 +89,7 @@ for(var i =0 ; i<sumArr.length();i++){
 
  return [sum,arrstring ];
 }
+//salim
 
 // Here is the test for sumArray(); uncomment it to run it
 
