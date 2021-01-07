@@ -57,8 +57,10 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   var sumfinal = sum(sumthree,c)[0];
 var productthree = multiply(a,b)[0]; 
 var prodfinal = multiply(productthree,c)[0];
-var sumresult = a+ ' and ' +b + ' and ' +c + ' sum to ' +sumthree + '.';
-var productresult = 'The product of ' +a + ' and ' +b + ' and ' +c + ' is ' + productthree + '.';
+var sumresult = a+ ' and ' +b + ' and ' +c + ' sum to ' +sumfinal + '.';
+var productresult = 'The product of ' +a + ' and ' +b + ' and ' +c + ' is ' + prodfinal + '.';
+// console.log(sumresult)
+// console.log(productthree)
 return[sumfinal,prodfinal,sumresult,productresult];
 }
 
@@ -105,11 +107,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+var multitotal = 1;
+multitotal = multiply(multArr[0], multArr[1])[0];
+multitotal = multiply(multitotal, multArr[2])[0];
+return [multitotal, 'The numbers ' +  multArr + ' have a product of ' + multitotal + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
