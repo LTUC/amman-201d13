@@ -60,15 +60,29 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
 
-  var values = sum(5, 11);
-  var first = values[0];
-  var resultString = a+' and '+ b +' and '+ c +' sum to '+ first +'.';
+  // var values = sum(5, 11);
+  // var first = values[0];
+  // var resultString = a+' and '+ b +' and '+ c +' sum to '+ first +'.';
 
-  var values = multiply(28, 5);
-  var second = values[0];
-  var reultString = 'The product of '+ a +' and ' + b + ' and ' + c + ' is '+ second +'.';
+  // var values = multiply(28, 5);
+  // var second = values[0];
+  // var reultString = 'The product of '+ a +' and ' + b + ' and ' + c + ' is '+ second +'.';
 
-  return[first,second,resultString,reultString];
+  // return[first,second,resultString,reultString];
+
+
+
+ 
+  var sumResult = sum(sum(a, b)[0], c)[0];
+  // console.log(sumResult);
+  var multipleResult = multiply((multiply(a, b)[0]), c)[0];
+  // console.log(multipleResult);
+    // calculate sum of numbers in array 
+  var passMessage1 = a + ' and ' + b + ' and ' + c + ' sum to ' + sumResult + '.';
+  // console.log(passMessage1);
+  var passMessage2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multipleResult + '.';
+  // console.log(passMessage2);
+  return [sumResult,multipleResult,passMessage1,passMessage2];
 
 }
 
