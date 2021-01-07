@@ -53,10 +53,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-var sum = a +b +c ;
-var muli = a *b *c;
-var sumstring = a+' and '+b+' and '+c+' sum to '+sum+'.';
-var multistring='The product of '+a+' and '+b+' and '+c+' is '+multi+'.';
+var sum2 = sum(a+b,c);
+
+var multi2 =multiply(a*b,c);
+var sumstring = a+' and '+b+' and '+c+' sum to '+sum2+'.';
+var multistring='The product of '+a+' and '+b+' and '+c+' is '+multi2+'.';
 
 return [sum , multi,sumstring,multistring];
 
@@ -89,7 +90,6 @@ for(var i =0 ; i<sumArr.length();i++){
 
  return [sum,arrstring ];
 }
-//salim
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -109,6 +109,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  var rus=1; 
+for(var i =0 ; i<multArr.length(); i++){
+ rus*=multArr[i];
+}
+var arrstring='The numbers '+multArr[0]+','+multArr[1]+','+multArr[2]+' have a product of '+rus+'.';
+return[rus,arr];
 
 }
 
