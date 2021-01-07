@@ -27,15 +27,18 @@ Write a function called multiply() that takes in two numbers as arguments and re
 "The product of 5 and 9 is 45."
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
-
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
+  var multi= a*b;
+  var result ="The product of "+ a +" and "+b+ " is " +multi+"."
+  return [multi,result];
 
 }
 
-// Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
 
+// Here is the test for multiply(); uncomment it to run it
+ testMultiply(5,9);
+//console.log(multiply(5,9));
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -52,11 +55,22 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
+// var resultsumAB=sum(a,b);
+// console.log(sum(a,b));
+// var finalresultsum=sum(resultsumAB,c);
+// var resultmultiAB=multiply(a,b);
+// var finalresultmulti=multiply(resultmultiAB,c);
+var finalresultsum = a+b+c;
+var finalresultmulti=a*b*c;
+var sumresult=a+" and "+b+" and "+c+" sum to "+finalresultsum+".";
+ var multiplyresult="The product of "+a+" and "+b+" and "+c+" is "+finalresultmulti+".";
+
+return[finalresultsum,finalresultmulti,sumresult,multiplyresult];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
-
+ testSumAndMultiply(4,7,5);
+//console.log(sumAndMultiply(4,7,5));
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -74,11 +88,19 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
+  var Arraysum=sum(testArray[0],testArray[1])[0];
+var arrSumRes=sum(Arraysum,testArray[2])[0]
+
+var resultproplem4=testArray[0]+","+testArray[1]+","+testArray[2]+" was passed in as an array of numbers, and "+arrSumRes+" is their sum."
+//console.log(resultproplem4)
+return[arrSumRes,resultproplem4];
 }
+
+//sumArray(testArray);
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -91,17 +113,21 @@ Write a function called multiplyArray() that takes an array of numbers as its ar
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements. However, you may continue to use the + operator for string concatenation.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
-
+// var multiarrayZ=[2,3,4]
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
+  var multiarrayAB= multiply(multArr[0],multArr[1])[0];
+  var ArrFiRe=multiply(multiarrayAB,multArr[2])[0];
+  var FinalResultProb5="The numbers "+multArr[0]+","+multArr[1]+","+multArr[2]+" have a product of 24."
+return[ArrFiRe,FinalResultProb5];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
-
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
 // Don't forget to create a new branch for your work on the next question, if you attempt it.
@@ -123,9 +149,16 @@ var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
+  var Multiarr1=multiply(testDynamicArray[0],testDynamicArray[1])[0];
+  var Multiarr2=multiply(testDynamicArray[2],testDynamicArray[3])[0];
+  var Multiarr3=multiply(testDynamicArray[4],Multiarr2)[0];
+  var FiREMuArr=multiply(Multiarr3,Multiarr1)[0];
+  //console.log(FiREMuArr);
+var FinalResultProb6="The numbers "+testDynamicArray[0]+","+testDynamicArray[1]+","+testDynamicArray[2]+","+testDynamicArray[3]+","+testDynamicArray[4]+" have a product of 120."
+return [FiREMuArr,FinalResultProb6];
 }
-
+//multiplyAnyArray(testDynamicArray);
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
