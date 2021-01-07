@@ -112,11 +112,11 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-var mulArr = [2,3,4];
+var mulArr = [2, 3, 4];
 function multiplyArray(multArr) { //eslint-disable-line
-multiply1(mulArr[0],mulArr[1],mulArr[2]);
-var returnMul = 'The numbers '+ mulArr[0]+','+mulArr[1]+','+mulArr[2]+' have a product of 24.'
-return[multiply3,returnMul];
+  multiply1(mulArr[0], mulArr[1], mulArr[2]);
+  var returnMul = 'The numbers ' + mulArr[0] + ',' + mulArr[1] + ',' + mulArr[2] + ' have a product of 24.'
+  return [multiply3, returnMul];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -141,13 +141,25 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
+
+var h = 1;
 var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
+var finalmultiply;
+function finalMultiply() {
+  for (var i = 0; i < testDynamicArray.length; i++) {
+    finalmultiply = h *= testDynamicArray[i];
+    console.log(h);
+  }
+} 
 
-function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+function multiplyAnyArray() { //eslint-disable-line
+  finalMultiply();
+  var returnString = 'The numbers ' + testDynamicArray[0] + ',' + testDynamicArray[1] + ',' + testDynamicArray[2] + ',' + testDynamicArray[3] + ',' + testDynamicArray[4] + ' have a product of ' + finalmultiply + '.';
+  return [finalmultiply, returnString];
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+//testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
