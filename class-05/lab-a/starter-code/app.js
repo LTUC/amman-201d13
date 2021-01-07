@@ -52,11 +52,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  var sum = a+b+c;
-  var multiply = a*b*c;
-  var reultString = "4 and 7 and 5 sum to 16."
-  var reultString2 ="The product of 4 and 7 and 5 is 140."
-  return[sum,multiply,reultString,reultString2];
+   var sumab=sum(a,b)[0];
+   var sumabc= sum(sumab,c)[0];
+  var multiplyab = multiply(a,b)[0];
+  var multiplyabc =multiply(multiplyab,c)[0];
+  var reultString = a+" and "+b+" and "+c+" sum to "+sumabc+".";
+  var reultString2 = "The product of "+a+" and "+b+" and "+c+" is "+multiplyabc+".";
+  return[sumabc, multiplyabc ,reultString ,reultString2];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
