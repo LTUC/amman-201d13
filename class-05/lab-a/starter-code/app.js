@@ -13,6 +13,7 @@ function sum(a, b) { //eslint-disable-line
   var reultString = 'The sum of '+a+' and '+b +' is '+sum+'.';
   return[sum,reultString];
 
+  //var 
 }
 
 // Here is the test for sum(); uncomment it to run it
