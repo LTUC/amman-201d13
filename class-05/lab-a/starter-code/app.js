@@ -83,8 +83,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
-
-function sumArray(sumArr) { //eslint-disable-line
+  function sumArray(sumArr) { //eslint-disable-line
+      var total = 1;
+  
+      for (var i = 0; i < sumArry.length; i = i + 1) {
+        total = sum(total, sumArr[i])[0];
+      }
+  
+    return[total, "2,3,4 was passed in as an array of numbers, and 9 is their sum."]
 
 }
 
