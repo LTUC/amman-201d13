@@ -70,7 +70,7 @@ return[sum2,multiply2,string1,string2];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-//  testSumAndMultiply(4,7,5);
+  testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
