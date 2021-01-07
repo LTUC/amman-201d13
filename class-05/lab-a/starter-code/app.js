@@ -28,7 +28,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 function multiply(a, b) {
 var multi=a*b;
-var resu='The product of '+ a+ '  and  ' +b+  ' is ' +multi +'.';
+var resu='The product of '+ a+' and '+b+' is '+multi+'.';
 return[multi,resu]
 }
 
