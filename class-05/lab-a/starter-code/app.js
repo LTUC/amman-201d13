@@ -17,7 +17,6 @@ testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
-/////////////////////////////////////
 /* Problem 2
 Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
@@ -49,12 +48,6 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
 	//eslint-disable-line
-	// return [
-	// 	a + b + c,
-	// 	a * b * c,
-	// 	`${a} and ${b} and ${c} sum to ${a + b + c}.`,
-	// 	`The product of ${a} and ${b} and ${c} is ${a * b * c}.`,
-	// ];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -77,7 +70,7 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
 	//eslint-disable-line
-	
+
 }
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -128,6 +121,7 @@ var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 function multiplyAnyArray(dynamicArray) {
     //eslint-disable-line
    
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
