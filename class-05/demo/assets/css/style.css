@@ -1,0 +1,175 @@
+body {
+    height: 800px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    background: #dddddd;
+    display: inline-block;
+}
+
+.relative {
+    position: relative;
+    left: 30px;
+    top: 30px;
+    background: #000;
+}
+
+.absolute {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: #ffd369;
+}
+
+.fixed {
+    background: #222831;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+header {
+    background-color: #393e46;
+    height: 100px;
+    position: relative;
+    /* top: 0px; */
+}
+
+footer {
+    background-color: #222831;
+}
+
+main {
+    background: rgba(44, 6, 31, 0.2);
+    height: 100%;
+}
+
+header img {
+    height: 50px;
+    position: relative;
+    top: calc(50% - 25px);
+    left: 30px;
+    background: #fff
+}
+
+
+/* header nav {
+
+} */
+
+.header-nav {
+    position: absolute;
+    top: calc(50% - 25px);
+    right: 15px;
+    text-align: right;
+}
+
+.header-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav li {
+    float: left;
+    color: #fff;
+    line-height: 50px;
+    margin: 0 10px;
+    list-style-type: none;
+}
+
+footer p {
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    margin: 0%;
+}
+
+.item-box {
+    width: 200px;
+    float: right;
+    margin-left: 10px;
+    position: relative;
+}
+
+.item-box img {
+    width: 100%;
+}
+
+
+/* .position-sticky {
+    position: sticky;
+    top: 10px
+} */
+
+.gallery-title {
+    text-align: center;
+}
+
+.first,
+.second,
+.third {
+    height: 200px;
+}
+
+.first p {
+    position: sticky;
+    top: 20px;
+}
+
+.second p {
+    position: sticky;
+    top: 20px;
+}
+
+.third p {
+    position: sticky;
+    top: 20px;
+}
+
+.item-box p {
+    position: absolute;
+    top: calc(50% - 15px);
+    margin: 0;
+    text-align: center;
+    background: #fff;
+}
+
+.demo_wrap {
+    position: relative;
+    background: #5C97FF;
+    overflow: hidden;
+    width: 100%;
+}
+
+.demo_wrap h1 {
+    padding: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* You could use :after - it doesn't really matter */
+
+.demo_wrap:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url('https://assets.digitalocean.com/labs/images/community_bg.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
