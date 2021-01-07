@@ -30,7 +30,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
 var multiplication = a*b;
-var product = 'The product of' +a+ ' and ' +b + ' is '+multiplication + '.';
+var product = 'The product of ' +a+ ' and ' +b + ' is '+multiplication + '.';
 return[multiplication,product];
 }
 
@@ -52,11 +52,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-var sumthree =  a+b+c;
-var productthree = a*b*c;
-var sumresult = a+ ' and ' +b + ' and ' +c + 'sum to ' +sumthree + '.';
-var productresult = ' The product of ' +a + ' and ' +b + ' and ' +c + ' is ' + productthree + '.';
-return[sumthree, productthree, sumresult, productresult];
+
+  var sumthree = sum(a,b)[0]; 
+  var sumfinal = sum(sumthree,c)[0];
+var productthree = multiply(a,b)[0]; 
+var prodfinal = multiply(productthree,c)[0];
+var sumresult = a+ ' and ' +b + ' and ' +c + ' sum to ' +sumthree + '.';
+var productresult = 'The product of ' +a + ' and ' +b + ' and ' +c + ' is ' + productthree + '.';
+return[sumfinal,prodfinal,sumresult,productresult];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -78,12 +81,15 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+var sumtotal = 0;
+sumtotal = sum(sumArr[0], sumArr[1])[0];
+sumtotal = sum(sumtotal, sumArr[2])[0];
+return [sumtotal, sumArr + ' was passed in as an array of numbers, and ' + sumtotal + ' is their sum.'];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
