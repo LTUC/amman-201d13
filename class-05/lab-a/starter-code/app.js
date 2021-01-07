@@ -48,8 +48,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { 
-    var suM=sum+c;
-    var mult=multiply(a.b)*c
+    var suM=sum(a,b)[0]+c;
+    var mult=multiply(a,b)[0]*c;
     var sumOf=a+' and '+b+' and '+ c+' sum to ' +16+ '.';
     var mutliP='The product of '+a+' and '+b+' and ' +5+ ' is '+ mult+'.';
     return[suM,mult,sumOf,mutliP];
