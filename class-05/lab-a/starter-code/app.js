@@ -53,13 +53,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-var sum2 = sum(a+b,c);
-
-var multi2 =multiply(a*b,c);
+  var sum1 =sum(a,b)[0];
+  var sum2 = sum(sum1,c)[0];
+  var multi1 =multiply(a,b)[0];
+var multi2 =multiply(multi1,c)[0];
 var sumstring = a+' and '+b+' and '+c+' sum to '+sum2+'.';
 var multistring='The product of '+a+' and '+b+' and '+c+' is '+multi2+'.';
 
-return [sum , multi,sumstring,multistring];
+return [sum2 , multi2,sumstring,multistring];
 
 }
 
@@ -80,13 +81,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
-testArray.length()
+
 function sumArray(sumArr) { //eslint-disable-line
-  var sum =0;
-for(var i =0 ; i<sumArr.length();i++){
-    sum +=sumArr[i];
+  var Lsum =sumArr[0];
+  var numstring=sumArr[0].toString()+',';
+for(var i = 1; i<sumArr.length;i++){
+
+    Lsum=sum(Lsum,sumArr[i])[0];
+    numstring+=sumArr[i].toString()+',';
  }
- var arrstring = ''+sumArr[0]+','+sumArr[1]+','+sumArr[2]+' was passed in as an array of numbers, and '+sum+' is their sum.';
+ var arrstring = numstring+' was passed in as an array of numbers, and '+Lsum+' is their sum.';
 
  return [sum,arrstring ];
 }
@@ -110,16 +114,19 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
   var rus=1; 
-for(var i =0 ; i<multArr.length(); i++){
- rus*=multArr[i];
+  var numstring='';
+for(var i =0 ; i<multArr.length; i++){
+ rus=multiply(rus,multArr[i])[0];
+ numstring=numstring+multArr[i].toString()+',';
 }
-var arrstring='The numbers '+multArr[0]+','+multArr[1]+','+multArr[2]+' have a product of '+rus+'.';
-return[rus,arr];
+var arrstring='The numbers '+numstring+' have a product of '+rus+'.';
+return[rus,arrstring];
+//salim
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -143,7 +150,15 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+  var rus=1;
+  
+  var numstring ='' ;
+  for(var i =0; i<dynamicArray.length;i++){
+   rus =multiply(rus,dynamicArray[i])[0];
+   numstring=numstring+dynamicArray[i].toString()+',';
+  }
+  var arrstring ='The numbers '+numstring+' have a product of '+rus+'.';
+return[rus,arrstring];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
