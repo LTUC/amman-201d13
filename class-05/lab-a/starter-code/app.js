@@ -9,7 +9,7 @@ Test this function by hand in the console to get it working, and when you think 
  
 function sum(a, b) {
  var   sum= a+b;
- var   result=('The sum of  ' + a + ' and  '+b+ ' is '+sum+'.');
+ var   result=('The sum of '+ a +' and '+b+' is '+sum+'.');
  return[sum,result];
 
 }
