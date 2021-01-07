@@ -12,7 +12,6 @@ function sum(a, b) { //eslint-disable-line
   var sum = a+b;
   var reultString = 'The sum of '+a+' and '+b +' is '+sum+'.';
   return[sum,reultString];
-
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -30,9 +29,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+var mult = a*b;
+var resultmult= 'The Product Of '+a+' and '+b+' is '+mult+'.';
+return [mult,resultmult];
 }
-
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
 
