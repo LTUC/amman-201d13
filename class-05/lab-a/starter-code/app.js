@@ -136,3 +136,4 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 // testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
+ // well, i didn't know that problem6 is from the stritch goals and i created a new branch for it already but i don't want to try to solve it because i don't have time , so i decided to write this comment just to make any changes and make the repo syncronized
