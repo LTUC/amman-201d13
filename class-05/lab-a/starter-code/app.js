@@ -126,12 +126,18 @@ var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     var multiply5 = 1;
+    var massege = 'The numbers ';
     for (var i = 0; dynamicArray.length > i; i++) {
         multiply5 = multiply(dynamicArray[i], multiply5)[0];
 
-
+        if (i < dynamicArray.length - 1) {
+            massege = massege + dynamicArray[i] + ',';
+        } else {
+            massege = massege + dynamicArray[i];
+        }
     }
-    return [multiply5, 'The numbers 1,2,3,4,5 have a product of 120.'];
+    massege = massege + ' have a product of ' + multiply5 + '.';
+    return [multiply5, massege];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
