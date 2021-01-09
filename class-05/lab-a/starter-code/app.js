@@ -59,13 +59,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
-var sum1=(sum(a,b)[0]);
-var sum2=(sum(sum1,c)[0]);
-var multiply1 =(multiply(a,b)[0]);
-var multiply2 =(multiply(multiply1,c)[0]);
-var string1 =a+' and '+b+' and '+c+' sum to '+sum2+'.';
-var string2 ='The product of '+a+' and '+b+' and '+c+' is '+multiply2+'.';
-return[sum2,multiply2,string1,string2];
+  var sum1=sum(a,b);
+  var sum2=sum(sum1[0],c);
+  var multiply1 =multiply(a,b);
+  var multiply2 =multiply(multiply1[0],c);
+  var string1 =a+' and '+b+' and '+c+' sum to '+sum2[0]+'.';
+  var string2 ='The product of '+a+' and '+b+' and '+c+' is '+multiply2[0]+'.';
+  return[sum2[0],multiply2[0],string1,string2];
 
 }
 
