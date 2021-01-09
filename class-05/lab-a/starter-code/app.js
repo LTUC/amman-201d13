@@ -122,10 +122,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-var product1= multiply(multArr[0],multArr[1]);
-var product2=multiply(product1[0],multArr[2]);
-var string= 'The numbers '+multArr+' have a product of '+product2[0];
-return[product2,string];
+
 
 }
 // var j =0
