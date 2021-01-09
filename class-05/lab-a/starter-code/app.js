@@ -53,11 +53,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { 
-    var suM=sum(a,b)[0]+c;
-    var mult=multiply(a,b)[0]*c;
-    var sumOf=a+' and '+b+' and '+ c+' sum to ' +16+ '.';
-    var mutliP='The product of '+a+' and '+b+' and ' +5+ ' is '+ mult+'.';
-    return[suM,mult,sumOf,mutliP];
+    var suM=sum(a,b)[0];
+    var suM1=sum(suM,c)[0];
+    var mult=multiply(a,b)[0];
+    var mult1=multiply(mult,c)[0];
+    var sumOf=a+' and '+b+' and '+ c+' sum to ' +suM1+ '.';
+    var mutliP='The product of '+a+' and '+b+' and ' +c+ ' is '+ mult1+'.';
+    return[suM1,mult1,sumOf,mutliP];
 
 }
 
@@ -79,13 +81,19 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
+function sumArray(sumArr){ 
+ var arrySum=0;
+ for(var i=0;i<sumArr.length; i++){
+  arrySum=sum(arrySum,sumArr[i])[0]; 
+  //console.log(arrySum);
+ }
 
+ return[arrySum, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${arrySum} is their sum.`]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
