@@ -53,9 +53,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-var sum = a + b + c;
-var pro = a*b*c;
-return [sum,pro,a+' and '+b+' and '+c+' sum to '+sum+'.','The product of '+a+' and '+b+' and '+c+' is '+pro+'.'];
+var summation = 0;
+summation = sum(a,b)[0];
+summation = sum(summation,c)[0];
+var pro = 1;
+pro = multiply(a,b)[0];
+pro = multiply(pro,c)[0];
+return [summation,pro,a+' and '+b+' and '+c+' sum to '+summation+'.','The product of '+a+' and '+b+' and '+c+' is '+pro+'.'];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -140,3 +144,4 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
  // well, i didn't know that problem6 is from the stritch goals and i created a new branch for it already but i don't want to try to solve it because i don't have time , so i decided to write this comment just to make any changes and make the repo syncronized
+ // and here is my last edit
