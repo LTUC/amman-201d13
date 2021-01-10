@@ -9,9 +9,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-  var sum = a+b;
-  var reultString = 'The sum of '+a+' and '+b +' is '+sum+'.';
-  return[sum,reultString];
+  var summation = a+b;
+  var reultString = 'The sum of '+a+' and '+b +' is '+summation+'.';
+  return[summation,reultString];
 
 }
 
@@ -77,8 +77,10 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-var sum=testArray[0]+testArray[1]+testArray[2];
-return[sum,testArray[0]+','+testArray[1]+','+testArray[2]+' was passed in as an array of numbers, and '+sum+' is their sum.']; 
+  var summation = 0;
+  summation = sum(sumArr[0],sumArr[1])[0];
+ summation = sum(summation,sumArr[2])[0];
+return[summation,sumArr+' was passed in as an array of numbers, and '+summation+' is their sum.']; 
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -99,9 +101,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-  
-  var pro2=testArray[0]*testArray[1]*testArray[2];
-  return[pro2,'The numbers '+testArray[0]+','+testArray[1]+','+testArray[2]+' have a product of '+pro2+'.'];
+  var pro2 = 1;
+  pro2 = multiply(multArr[0],multArr[1])[0];
+  pro2 = multiply(pro2,multArr[2])[0];
+  return[pro2,'The numbers '+multArr +' have a product of '+pro2+'.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
