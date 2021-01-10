@@ -53,8 +53,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-var sumfirst = a+b+c;
-var multi = a*b*c;
+var sumfirst = sum(sum(a, b)[0], c)[0];
+var multi = multiply(multiply(a, b)[0], c)[0];
 var e = ''+a+' and '+b+' and '+c+' sum to ' +sumfirst+'.';
 var ali = 'The product of '+a+' and '+b+' and '+c+' is ' +multi+'.';
 
