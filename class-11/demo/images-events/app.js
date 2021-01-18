@@ -8,11 +8,15 @@ var userAttemptsCounter = 0;
 var leftImageIndex;
 var rightImageIndex;
 
+var imagesNames = [];
+var votes = [];
+
 function GoatImage(name,source){
   this.name = name;
   this.source = source;
   this.votes = 0;
   GoatImage.prototype.allImages.push(this);
+  imagesNames.push(name);
 }
 
 GoatImage.prototype.allImages = [];
@@ -52,7 +56,11 @@ function handleUserClick(event){
     }
     rightImageElement.removeEventListener('click',handleUserClick);
     leftImageElement.removeEventListener('click',handleUserClick);
-
+    
+for(var i = 0; i < GoatImage.prototype.allImages.length; i++){
+  votes.push(GoatImage.prototype.allImages[i].votes);
+}
+    chart.config.data.datasets[0].data = votes;
   }
 
 }
@@ -72,6 +80,32 @@ function renderTwoRandomImages(){
 function generateRandomIndex(){
   return Math.floor(Math.random() * (GoatImage.prototype.allImages.length));
 }
+
+
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: imagesNames,
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: votes
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+
+
+
+console.log(chart);
 
 /*
   Practice domain modeling by planning out an app w that allows users to choose their favorite between two goats
