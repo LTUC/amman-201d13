@@ -1,0 +1,111 @@
+* {
+  font-family: sans-serif;
+}
+
+img {
+  max-width: 40%;
+}
+
+
+.rounding {
+  width: 200px;
+  height: 200px;
+  background-color: #0394e6;
+  border-radius: 0;
+  transition: 2s;
+}
+
+.rounding:hover {
+  transition-property: border-radius, background-color;
+  transition-duration: 2s;
+  transition-timing-function: linear, linear;
+  border-radius: 50%;
+  background-color: #f03c1d;
+}
+
+.doNothing {
+  background-color: #a570da;
+  opacity: 0.8;
+  outline: 2px solid #ffffff;
+  transition: opacity 100ms linear;
+}
+
+.doNothing:hover {
+  transition: opacity 2000ms ease-in-out;
+  opacity: 1.0;
+}
+
+.doNothing:active {
+  transition-property: outline;
+  transition-duration: 2000ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.165, 0);
+  outline: 9px solid yellow;
+}
+
+
+.animation {
+  background-color: #cccccc;
+  border: 2px solid #bbbbbb;
+  border-radius: 3%;
+  width: 400px;
+  height: 400px;
+}
+
+@keyframes moveRight {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    left: 90%;
+    top: 0%;
+  }
+  50% {
+    left: 0%;
+    top: 50%;
+  }
+  75% {
+    left: 90%;
+    top: 75%;
+  }
+  100% {
+    left: 0%;
+    top: 90%;
+  }
+}
+
+.animationElement {
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: moveRight;
+  width: 10%;
+  height: 10%;
+  background-color: #0c8f16;
+  position: relative;
+  
+}
+
+
+@keyframes blinkAnimation {
+  0% {
+    /*opacity: 1.0;*/
+    color: #000000;
+  }
+  50% {
+    /*opacity: 0;*/
+    color: #ffffff;
+  }
+  100% {
+    /*opacity: 1.0;*/
+    color: #000000;
+  }
+}
+
+.blink {
+  animation-name: blinkAnimation;
+  /* animation-iteration-count: infinite;
+  animation-timing-function: steps(100);
+  animation-duration: 2000ms; */
+  animation-duration: 2000ms; 
+}
